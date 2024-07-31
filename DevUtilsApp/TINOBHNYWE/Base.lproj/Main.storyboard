@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15400"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22689"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,9 +23,6 @@
                                         </menuItem>
                                         <menuItem title="Check for Updates..." id="DoJ-et-J6E">
                                             <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="checkForUpdates:" target="T8O-WY-UtC" id="Utr-Zw-QZF"/>
-                                            </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
@@ -483,7 +479,6 @@
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="T8O-WY-UtC" customClass="SUUpdaterWrapper" customModule="DevUtils" customModuleProvider="target"/>
                 <userDefaultsController id="GvM-kS-J7m"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -538,14 +533,14 @@
         <scene sceneID="d3S-9C-YZy">
             <objects>
                 <viewController id="56V-C1-g2w" customClass="OutlineViewController" customModule="DevUtils" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-q3-lYD" customClass="NSVisualEffectView">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="433"/>
+                    <view key="view" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-q3-lYD" customClass="NSVisualEffectView">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="432"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-9A-hAY">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="405"/>
+                                <rect key="frame" x="0.0" y="-1" width="300" height="404"/>
                                 <subviews>
                                     <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz8-dw-lkb">
-                                        <rect key="frame" x="20" y="383" width="260" height="22"/>
+                                        <rect key="frame" x="20" y="382" width="260" height="22"/>
                                         <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="mE4-1S-mKL">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -556,7 +551,7 @@
                                         </connections>
                                     </searchField>
                                     <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOH-gO-Axy">
-                                        <rect key="frame" x="0.0" y="75" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="74" width="300" height="300"/>
                                         <clipView key="contentView" drawsBackground="NO" id="bDY-Pu-tgv">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -568,9 +563,8 @@
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn width="297" minWidth="40" maxWidth="1000" id="aoo-DF-9T7">
+                                                        <tableColumn width="268" minWidth="40" maxWidth="1000" id="aoo-DF-9T7">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
-                                                                <font key="font" metaFont="message" size="11"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -582,7 +576,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="ItemCell" id="Cac-LM-I6w" customClass="ToolOutlineTableCellView" customModule="DevUtils" customModuleProvider="target">
-                                                                    <rect key="frame" x="1" y="1" width="297" height="17"/>
+                                                                    <rect key="frame" x="11" y="1" width="277" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ky3-de-nle">
@@ -649,7 +643,7 @@
                                         </scroller>
                                     </scrollView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TUw-wd-mor">
-                                        <rect key="frame" x="74" y="39" width="152" height="32"/>
+                                        <rect key="frame" x="76" y="39" width="149" height="32"/>
                                         <buttonCell key="cell" type="push" title="Send Feedback" bezelStyle="rounded" image="NSTouchBarMailTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ERU-kc-qpr">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -761,7 +755,7 @@ https://DevUtils.app</string>
     </scenes>
     <resources>
         <image name="MenuIcon" width="1024" height="1024"/>
-        <image name="NSTouchBarMailTemplate" width="21" height="30"/>
+        <image name="NSTouchBarMailTemplate" width="24" height="17"/>
         <image name="bolt.fill" width="43" height="69"/>
     </resources>
 </document>
